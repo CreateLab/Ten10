@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Ten10.ViewModels;assembly=Ten10"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Ten10.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Ten10">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+   <Grid RowDefinitions="10,*,10,*">
+       <TextBox Text="{Binding Text}" Grid.Row="1"></TextBox>
+       <Button Command="{Binding Click}" Grid.Row="3">Click Me</Button>
+   </Grid>
+
+</Window>
